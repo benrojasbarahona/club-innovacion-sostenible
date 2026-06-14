@@ -50,7 +50,12 @@ const paths = {
 
 function Icon({ name, className = '', title }) {
   return (
-    <svg className={`icon ${className}`} viewBox="0 0 24 24" aria-hidden={title ? undefined : true} role={title ? 'img' : undefined}>
+    <svg
+      className={`w-6 h-6 fill-none stroke-current [stroke-width:1.9] [stroke-linecap:round] [stroke-linejoin:round] ${className}`}
+      viewBox="0 0 24 24"
+      aria-hidden={title ? undefined : true}
+      role={title ? 'img' : undefined}
+    >
       {title ? <title>{title}</title> : null}
       {paths[name]}
     </svg>
