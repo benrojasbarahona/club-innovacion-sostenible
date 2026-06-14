@@ -73,8 +73,10 @@ function MentorsNetwork({ onSchedule }) {
                 <p className="mentor-description">{mentor.descripcion}</p>
                 <dl className="contact-list">
                   <div>
-                    <dt>Teléfono</dt>
-                    <dd>{mentor.telefono}</dd>
+                    <dt className="text-[0.62rem] font-bold text-purple-400/80 uppercase tracking-wider mb-0.5">
+                      Teléfono
+                    </dt>
+                    <dd className="text-xs text-white/60">{mentor.telefono}</dd>
                   </div>
                   <div>
                     <dt>Email</dt>
