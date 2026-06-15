@@ -1,3 +1,6 @@
+const FORMS_URL =
+  'https://forms.office.com/Pages/ResponsePage.aspx?id=zxGbB6G8Y0SGwilo8oThng-fzTfdo9FBniTmrC29_mVUNFI5VjUyTVk0TkVXTENNWkpaSFFPWjFSUS4u';
+
 function Hero() {
   return (
     <section
@@ -19,20 +22,20 @@ function Hero() {
         {/* Copy */}
         <div>
           <img
-            className="w-32 mb-7 drop-shadow-[0_0_32px_rgba(249,161,9,0.2)]"
+            className="w-36 mb-8 drop-shadow-[0_0_40px_rgba(249,161,9,0.25)]"
             src="/imagenes-club/logo_blanco.png"
-            alt="Logo blanco del Club de Innovación Sostenible UACh"
+            alt="Logo blanco del Club de Innovacion Sostenible UACh"
           />
 
           <p className="mb-4 text-[0.72rem] font-black tracking-[0.22em] uppercase text-orange-500">
-            Construyendo el futuro sostenible
+            Innovacion con proposito
           </p>
 
           <h1
             id="hero-title"
             className="text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-6xl font-black leading-[0.95] text-white"
           >
-            Club de Innovación{' '}
+            Club de Innovacion{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600">
               Sostenible
             </span>{' '}
@@ -40,32 +43,30 @@ function Hero() {
           </h1>
 
           <p className="mt-5 text-xl sm:text-2xl font-bold text-orange-400/90 leading-snug">
-            Conectamos ideas con acción
+            Pensamos global, actuamos local
           </p>
 
           <p className="mt-4 text-[0.95rem] text-white/55 leading-relaxed max-w-[520px]">
-            Somos un espacio estudiantil de la Universidad Austral de Chile que impulsa proyectos,
-            formación y redes colaborativas para crear soluciones con impacto social, ambiental y económico.
+            Somos una comunidad estudiantil de la Universidad Austral de Chile que busca impulsar la
+            innovacion sostenible desde la colaboracion, la creatividad y la accion. Conectamos
+            estudiantes, ideas, proyectos y redes para desarrollar soluciones con impacto social,
+            ambiental y economico.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3" aria-label="Acciones principales">
             <a
-              href="#ser-parte"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-orange-500 hover:bg-orange-400 text-black font-bold rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(249,161,9,0.4)] text-sm"
-            >
-              Ser parte del club
-            </a>
-            <a
-              href="#proyectos"
+              href="#sobre-nosotros"
               className="inline-flex items-center gap-2 px-6 py-3 bg-white/[0.06] hover:bg-white/[0.1] border border-white/[0.1] hover:border-white/20 text-white font-semibold rounded-xl transition-all duration-200 backdrop-blur-sm text-sm"
             >
-              Ver proyectos
+              Conoce el club
             </a>
             <a
-              href="#mentores"
-              className="inline-flex items-center gap-2 px-6 py-3 text-white/55 hover:text-white border border-white/[0.07] hover:border-white/15 font-semibold rounded-xl transition-all duration-200 text-sm"
+              href={FORMS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-orange-500 hover:bg-orange-400 text-black font-bold rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(249,161,9,0.4)] text-sm"
             >
-              Red de Mentores
+              Unete al club
             </a>
           </div>
         </div>
@@ -73,7 +74,7 @@ function Hero() {
         {/* Panel */}
         <div
           className="hidden lg:flex flex-col rounded-2xl overflow-hidden border border-white/[0.09] shadow-[0_32px_80px_rgba(0,0,0,0.55)] bg-white/[0.03] backdrop-blur-sm"
-          aria-label="Información destacada del club"
+          aria-label="Informacion destacada del club"
         >
           <div className="overflow-hidden aspect-[4/3]">
             <img

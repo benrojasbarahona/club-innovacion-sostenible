@@ -52,12 +52,13 @@ function Footer() {
           {/* Contact */}
           <div>
             <h2 className="text-[0.68rem] font-black tracking-[0.18em] uppercase text-orange-400/80 mb-5">
-              Contacto
+              Contacto y ubicacion
             </h2>
             <div className="flex flex-col gap-2 text-sm text-white/38">
               <span>clubinnovacion@uach.cl</span>
-              <span>Espacio 14K · Campus Miraflores</span>
-              <span>Valdivia, Región de Los Ríos</span>
+              <span>Espacio 14K &middot; Campus Miraflores</span>
+              <span>Valdivia, Region de Los Rios, Chile</span>
+              <span className="mt-1 text-white/22 text-xs">Lunes 15:50 &ndash; 17:20 hrs</span>
             </div>
           </div>
         </div>

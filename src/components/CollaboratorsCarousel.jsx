@@ -3,7 +3,7 @@ import useEmblaCarousel from 'embla-carousel-react';
 import AutoScroll from 'embla-carousel-auto-scroll';
 import { colaboradores } from '../data/collaborators.js';
 
-const COLLABORATOR_AUTO_SCROLL_SPEED = 0.7;
+const COLLABORATOR_AUTO_SCROLL_SPEED = 0.35;
 
 function CollaboratorsCarousel() {
   const plugins = useMemo(

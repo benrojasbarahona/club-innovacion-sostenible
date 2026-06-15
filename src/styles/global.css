@@ -52,6 +52,8 @@ section { position: relative; }
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  transform: translateY(-200%);
+  transition: transform 0.2s ease;
 }
 
 .site-header {
@@ -927,7 +929,9 @@ section { position: relative; }
   grid-template-columns: 1.2fr 0.7fr 0.8fr;
   gap: 36px;
 }
-.skip-link:focus { transform: translateY(0); }
+.skip-link:focus {
+  transform: translateY(0);
+}
 
 :focus-visible {
   outline: 2px solid rgba(249, 161, 9, 0.75);

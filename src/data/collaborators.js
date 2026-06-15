@@ -1,74 +1,44 @@
 export const colaboradores = [
   {
     nombre: 'Global Shapers Community',
-    rol: 'Colaborador / Ecosistema de innovación',
-    institucion: 'Global Shapers Community',
+    rol: 'Colaborador / Ecosistema de innovacion',
     tipo: 'Ecosistema',
-    descripcion:
-      'Organización vinculada a redes de liderazgo joven, innovación e impacto.',
+    descripcion: 'Organizacion vinculada a redes de liderazgo joven, innovacion e impacto social global.',
     imagen: '/imagenes-club/logo-generico.png',
   },
   {
     nombre: 'Municipalidad Valdivia TV',
-    rol: 'Medio / Vinculación territorial',
-    institucion: 'Municipalidad de Valdivia',
-    tipo: 'Difusión',
-    descripcion:
-      'Espacio asociado a comunicación, territorio y visibilización de iniciativas locales.',
+    rol: 'Medio / Vinculacion territorial',
+    tipo: 'Difusion',
+    descripcion: 'Espacio asociado a comunicacion, territorio y visibilizacion de iniciativas locales.',
     imagen: '/imagenes-club/logo-generico.png',
   },
   {
-    nombre: 'World Economic Forum',
-    rol: 'Referencia internacional',
-    institucion: 'World Economic Forum',
-    tipo: 'Ecosistema global',
-    descripcion:
-      'Organización internacional vinculada a innovación, economía, sostenibilidad y desarrollo.',
+    nombre: 'World Vision',
+    rol: 'Referente / Impacto social',
+    tipo: 'Organizacion social',
+    descripcion: 'Organizacion de desarrollo humano con enfoque en comunidades vulnerables y sostenibilidad.',
     imagen: '/imagenes-club/logo-generico.png',
   },
   {
-    nombre: 'EtMday',
-    rol: 'Emprendimiento e innovación',
-    institucion: 'Emprende tu Mente',
-    tipo: 'Evento',
-    descripcion:
-      'Evento de emprendimiento e innovación que conecta startups, empresas, instituciones y comunidades.',
+    nombre: 'TECHO',
+    rol: 'Colaborador / Impacto comunitario',
+    tipo: 'Organizacion social',
+    descripcion: 'Organizacion latinoamericana que trabaja junto a comunidades en situacion de pobreza.',
     imagen: '/imagenes-club/logo-generico.png',
   },
   {
-    nombre: 'Alianza Emprende',
-    rol: 'Emprendimiento',
-    institucion: 'Alianza Emprende',
-    tipo: 'Colaborador',
-    descripcion:
-      'Iniciativa vinculada al fortalecimiento del ecosistema emprendedor.',
+    nombre: 'UACh',
+    rol: 'Institucion / Apoyo academico',
+    tipo: 'Universidad',
+    descripcion: 'Universidad Austral de Chile, casa de estudios que respalda y alberga al club.',
     imagen: '/imagenes-club/logo-generico.png',
   },
   {
-    nombre: 'VC Group Chile',
-    rol: 'Venture Capital / Financiamiento',
-    institucion: 'VC Group Chile',
-    tipo: 'Invitado / Colaborador',
-    descripcion:
-      'Organización vinculada a inversión, escalamiento y financiamiento de emprendimientos.',
-    imagen: '/imagenes-club/logo-generico.png',
-  },
-  {
-    nombre: 'Plastic Oceans',
-    rol: 'Sostenibilidad ambiental',
-    institucion: 'Plastic Oceans',
-    tipo: 'Organización ambiental',
-    descripcion:
-      'Organización enfocada en educación, conciencia ambiental y reducción de contaminación por plásticos.',
-    imagen: '/imagenes-club/logo-generico.png',
-  },
-  {
-    nombre: 'Founder Institute',
-    rol: 'Startup / Aceleración',
-    institucion: 'Founder Institute',
-    tipo: 'Ecosistema startup',
-    descripcion:
-      'Red internacional de formación, mentoría y aceleración para emprendimientos en etapa temprana.',
-    imagen: '/imagenes-club/logo-generico.png',
+    nombre: 'Club de Innovacion Sostenible UACh',
+    rol: 'Organizacion estudiantil',
+    tipo: 'Club',
+    descripcion: 'Comunidad estudiantil que impulsa proyectos de innovacion sostenible desde la UACh.',
+    imagen: '/imagenes-club/logo_blanco.png',
   },
 ];
