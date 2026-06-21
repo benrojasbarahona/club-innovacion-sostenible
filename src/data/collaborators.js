@@ -1,74 +1,68 @@
+const STORAGE = 'https://yvucnogpwegdmxgeeyjw.supabase.co/storage/v1/object/public'
+
 export const colaboradores = [
   {
     nombre: 'Global Shapers Community',
     rol: 'Colaborador / Ecosistema de innovación',
     institucion: 'Global Shapers Community',
     tipo: 'Ecosistema',
-    descripcion:
-      'Organización vinculada a redes de liderazgo joven, innovación e impacto.',
-    imagen: '/imagenes-club/logo-generico.png',
+    descripcion: 'Organización vinculada a redes de liderazgo joven, innovación e impacto.',
+    imagen: `${STORAGE}/logos/logo-generico.png`,
   },
   {
     nombre: 'Municipalidad Valdivia TV',
     rol: 'Medio / Vinculación territorial',
     institucion: 'Municipalidad de Valdivia',
     tipo: 'Difusión',
-    descripcion:
-      'Espacio asociado a comunicación, territorio y visibilización de iniciativas locales.',
-    imagen: '/imagenes-club/logo-generico.png',
+    descripcion: 'Espacio asociado a comunicación, territorio y visibilización de iniciativas locales.',
+    imagen: `${STORAGE}/logos/logo-generico.png`,
   },
   {
     nombre: 'World Economic Forum',
     rol: 'Referencia internacional',
     institucion: 'World Economic Forum',
     tipo: 'Ecosistema global',
-    descripcion:
-      'Organización internacional vinculada a innovación, economía, sostenibilidad y desarrollo.',
-    imagen: '/imagenes-club/logo-generico.png',
+    descripcion: 'Organización internacional vinculada a innovación, economía, sostenibilidad y desarrollo.',
+    imagen: `${STORAGE}/logos/logo-generico.png`,
   },
   {
     nombre: 'EtMday',
     rol: 'Emprendimiento e innovación',
     institucion: 'Emprende tu Mente',
     tipo: 'Evento',
-    descripcion:
-      'Evento de emprendimiento e innovación que conecta startups, empresas, instituciones y comunidades.',
-    imagen: '/imagenes-club/logo-generico.png',
+    descripcion: 'Evento de emprendimiento e innovación que conecta startups, empresas, instituciones y comunidades.',
+    imagen: `${STORAGE}/logos/logo-generico.png`,
   },
   {
     nombre: 'Alianza Emprende',
     rol: 'Emprendimiento',
     institucion: 'Alianza Emprende',
     tipo: 'Colaborador',
-    descripcion:
-      'Iniciativa vinculada al fortalecimiento del ecosistema emprendedor.',
-    imagen: '/imagenes-club/logo-generico.png',
+    descripcion: 'Iniciativa vinculada al fortalecimiento del ecosistema emprendedor.',
+    imagen: `${STORAGE}/logos/logo-generico.png`,
   },
   {
     nombre: 'VC Group Chile',
     rol: 'Venture Capital / Financiamiento',
     institucion: 'VC Group Chile',
     tipo: 'Invitado / Colaborador',
-    descripcion:
-      'Organización vinculada a inversión, escalamiento y financiamiento de emprendimientos.',
-    imagen: '/imagenes-club/logo-generico.png',
+    descripcion: 'Organización vinculada a inversión, escalamiento y financiamiento de emprendimientos.',
+    imagen: `${STORAGE}/logos/logo-generico.png`,
   },
   {
     nombre: 'Plastic Oceans',
     rol: 'Sostenibilidad ambiental',
     institucion: 'Plastic Oceans',
     tipo: 'Organización ambiental',
-    descripcion:
-      'Organización enfocada en educación, conciencia ambiental y reducción de contaminación por plásticos.',
-    imagen: '/imagenes-club/logo-generico.png',
+    descripcion: 'Organización enfocada en educación, conciencia ambiental y reducción de contaminación por plásticos.',
+    imagen: `${STORAGE}/logos/logo-generico.png`,
   },
   {
     nombre: 'Founder Institute',
     rol: 'Startup / Aceleración',
     institucion: 'Founder Institute',
     tipo: 'Ecosistema startup',
-    descripcion:
-      'Red internacional de formación, mentoría y aceleración para emprendimientos en etapa temprana.',
-    imagen: '/imagenes-club/logo-generico.png',
+    descripcion: 'Red internacional de formación, mentoría y aceleración para emprendimientos en etapa temprana.',
+    imagen: `${STORAGE}/logos/logo-generico.png`,
   },
-];
+]
