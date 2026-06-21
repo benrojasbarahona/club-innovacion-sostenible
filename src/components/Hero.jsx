@@ -20,7 +20,7 @@ function Hero() {
         <div>
           <img
             className="w-32 mb-7 drop-shadow-[0_0_32px_rgba(249,161,9,0.2)]"
-            src="/imagenes-club/logo_blanco.png"
+            src="https://yvucnogpwegdmxgeeyjw.supabase.co/storage/v1/object/public/logos/logo_blanco.png"
             alt="Logo blanco del Club de Innovación Sostenible UACh"
           />
 
@@ -77,7 +77,7 @@ function Hero() {
         >
           <div className="overflow-hidden aspect-[4/3]">
             <img
-              src="/imagenes-club/201103_W_P_Edificio-14K_Foto-de-portada.jpg"
+              src="https://yvucnogpwegdmxgeeyjw.supabase.co/storage/v1/object/public/galeria/201103_W_P_Edificio-14K_Foto-de-portada.jpg"
               alt="Edificio 14K de la Universidad Austral de Chile"
               className="w-full h-full object-cover opacity-70"
             />
