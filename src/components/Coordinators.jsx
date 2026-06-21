@@ -31,7 +31,7 @@ function Coordinators() {
               key={`${coordinator.nombre}-${coordinator.cargo}-${index}`}
               className="group rounded-2xl overflow-hidden bg-white/[0.03] border border-white/[0.07] hover:border-orange-500/20 transition-all duration-300"
             >
-              <div className="h-52 overflow-hidden bg-[#0d0825]">
+              <div className="aspect-[4/5] overflow-hidden bg-[#0d0825]">
                 <img
                   src={coordinator.imagen}
                   alt={`Imagen de ${coordinator.nombre}`}

@@ -62,7 +62,7 @@ function Hero() {
               Ver proyectos
             </a>
             <a
-              href="#mentores"
+              href="/mentores"
               className="inline-flex items-center gap-2 px-6 py-3 text-white/55 hover:text-white border border-white/[0.07] hover:border-white/15 font-semibold rounded-xl transition-all duration-200 text-sm"
             >
               Red de Mentores

@@ -1,8 +1,23 @@
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
+import PhotoSwipeLightbox from 'photoswipe/lightbox';
+import 'photoswipe/style.css';
 import { fotosDelClub } from '../data/gallery.js';
 
 function ClubGallery() {
   const galleryRef = useRef(null);
+
+  useEffect(() => {
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: galleryRef.current,
+      children: 'a',
+      pswpModule: () => import('photoswipe'),
+      bgOpacity: 0.94,
+      showHideAnimationType: 'zoom',
+    });
+
+    lightbox.init();
+    return () => lightbox.destroy();
+  }, []);
 
   const moveGallery = (direction) => {
     galleryRef.current?.scrollBy({
@@ -64,20 +79,34 @@ function ClubGallery() {
                 index % 7 === 0 ? 'gallery-item-wide' : ''
               }`}
             >
-              <img
-                src={foto.src}
-                alt={foto.alt}
-                className="h-full w-full object-cover opacity-80 transition duration-500 group-hover:scale-[1.03] group-hover:opacity-100"
-                loading="lazy"
-                decoding="async"
-              />
+              <a
+                href={foto.src}
+                data-pswp-width={foto.width}
+                data-pswp-height={foto.height}
+                data-cropped="true"
+                target="_blank"
+                rel="noreferrer"
+                className="block h-full w-full cursor-zoom-in"
+                aria-label={`Ampliar: ${foto.alt}`}
+              >
+                <img
+                  src={foto.src}
+                  alt={foto.alt}
+                  className="h-full w-full object-cover opacity-80 transition duration-500 group-hover:scale-[1.03] group-hover:opacity-100"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </a>
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+              <span className="pointer-events-none absolute bottom-3 right-3 grid h-9 w-9 place-items-center rounded-full border border-white/15 bg-black/45 text-lg text-white/80 opacity-0 backdrop-blur-sm transition group-hover:opacity-100" aria-hidden="true">
+                +
+              </span>
             </figure>
           ))}
         </div>
 
         <p className="mt-3 text-xs text-white/35">
-          Desliza horizontalmente para recorrer las {fotosDelClub.length} fotografías.
+          Desliza para recorrer las {fotosDelClub.length} fotografías y selecciona una para ampliarla.
         </p>
       </div>
     </section>

@@ -25,9 +25,10 @@ function InstitutionalLink() {
             </p>
           </div>
 
-          {/* Reemplazar este enlace cuando exista la URL oficial de la oficina. */}
           <a
-            href="https://www.uach.cl/"
+            href="https://ingenieria.uach.cl/innovacion-emprendimiento-y-transferencia-tecnologica/"
+            target="_blank"
+            rel="noreferrer"
             aria-label="Conocer la Oficina de Innovación"
             className="relative z-10 shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-orange-500 hover:bg-orange-400 text-black font-bold rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(249,161,9,0.35)] text-sm"
           >

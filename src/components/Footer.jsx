@@ -2,11 +2,14 @@ const quickLinks = [
   { href: '#sobre-nosotros', label: 'Sobre nosotros' },
   { href: '#que-hacemos', label: 'Qué hacemos' },
   { href: '#proyectos', label: 'Proyectos' },
-  { href: '#mentores', label: 'Red de Mentores' },
+  { href: '/mentores', label: 'Red de Mentores' },
   { href: '#contacto', label: 'Contacto' },
 ];
 
 function Footer() {
+  const isHomePage = window.location.pathname === '/';
+  const resolveHref = (href) => (href.startsWith('#') && !isHomePage ? `/${href}` : href);
+
   return (
     <footer className="relative bg-[#06030f] border-t border-white/[0.05]">
       <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
@@ -40,7 +43,7 @@ function Footer() {
               {quickLinks.map((link) => (
                 <a
                   key={link.href}
-                  href={link.href}
+                  href={resolveHref(link.href)}
                   className="text-sm text-white/38 hover:text-orange-400 transition-colors duration-150"
                 >
                   {link.label}

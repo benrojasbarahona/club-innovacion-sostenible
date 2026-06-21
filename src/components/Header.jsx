@@ -5,7 +5,7 @@ const navLinks = [
   { href: '#sobre-nosotros', label: 'Sobre nosotros' },
   { href: '#que-hacemos', label: 'Qué hacemos' },
   { href: '#proyectos', label: 'Proyectos' },
-  { href: '#mentores', label: 'Red de Mentores' },
+  { href: '/mentores', label: 'Red de Mentores' },
   { href: '#colaboradores', label: 'Colaboradores' },
   { href: '#coordinadores', label: 'Coordinadores' },
   { href: '#estatutos', label: 'Estatutos' },
@@ -25,6 +25,8 @@ function Header() {
   }, []);
 
   const closeMenu = () => setIsOpen(false);
+  const isHomePage = window.location.pathname === '/';
+  const resolveHref = (href) => (href.startsWith('#') && !isHomePage ? `/${href}` : href);
 
   return (
     <header
@@ -35,14 +37,14 @@ function Header() {
       }`}
       style={{ height: 'var(--header-height)' }}
     >
-      <a className="skip-link" href="#inicio">Saltar al contenido</a>
+      <a className="skip-link" href="#main-content">Saltar al contenido</a>
 
       <nav
         className="section-shell h-full flex items-center justify-between gap-4"
         aria-label="Navegación principal"
       >
         {/* Brand */}
-        <a href="#inicio" onClick={closeMenu} className="flex items-center gap-2.5 shrink-0 group">
+        <a href="/#inicio" onClick={closeMenu} className="flex items-center gap-2.5 shrink-0 group">
           <img
             src="/imagenes-club/logo_blanco.png"
             alt="Logo Club de Innovación Sostenible UACh"
@@ -58,7 +60,7 @@ function Header() {
           {navLinks.slice(0, -1).map((link) => (
             <a
               key={link.href}
-              href={link.href}
+              href={resolveHref(link.href)}
               className="px-2.5 py-1.5 text-[0.8rem] text-white/50 hover:text-white rounded-lg hover:bg-white/[0.05] transition-all duration-150 font-medium whitespace-nowrap"
             >
               {link.label}
@@ -68,7 +70,7 @@ function Header() {
 
         <div className="flex items-center gap-3 shrink-0">
           <a
-            href="#ser-parte"
+            href={isHomePage ? '#ser-parte' : '/#ser-parte'}
             className="hidden sm:inline-flex items-center px-4 py-2 text-[0.82rem] font-bold bg-orange-500 hover:bg-orange-400 text-black rounded-xl transition-all duration-150 hover:shadow-[0_4px_20px_rgba(249,161,9,0.35)] whitespace-nowrap"
           >
             Ser parte
@@ -100,7 +102,7 @@ function Header() {
             {navLinks.map((link) => (
               <a
                 key={link.href}
-                href={link.href}
+                href={resolveHref(link.href)}
                 onClick={closeMenu}
                 className="px-4 py-2.5 text-sm text-white/60 hover:text-white hover:bg-white/[0.04] rounded-xl transition-all duration-150 font-medium"
               >
