@@ -46,7 +46,7 @@ function Header() {
         {/* Brand */}
         <a href="/#inicio" onClick={closeMenu} className="flex items-center gap-2.5 shrink-0 group">
           <img
-            src="/imagenes-club/logo_blanco.png"
+            src="https://yvucnogpwegdmxgeeyjw.supabase.co/storage/v1/object/public/logos/logo_blanco.png"
             alt="Logo Club de Innovación Sostenible UACh"
             className="w-9 h-9 object-contain transition-transform duration-300 group-hover:scale-105"
           />

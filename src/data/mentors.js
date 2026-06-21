@@ -10,7 +10,7 @@ export const mentores = [
     telefono: 'Contacto pendiente',
     email: 'Correo pendiente',
     linkedin: '[aquí iría el link del LinkedIn]',
-    imagen: '/imagenes-club/mentores/veronika-fischer.jpg',
+    imagen: 'https://yvucnogpwegdmxgeeyjw.supabase.co/storage/v1/object/public/galeria/placeholder-persona.jpg',
   },
   {
     nombre: 'Joaquín Contreras Ovalle',
@@ -23,7 +23,7 @@ export const mentores = [
     telefono: 'Contacto pendiente',
     email: 'Correo pendiente',
     linkedin: '[aquí iría el link del LinkedIn]',
-    imagen: '/imagenes-club/mentores/joaquin-contreras.jpg',
+    imagen: 'https://yvucnogpwegdmxgeeyjw.supabase.co/storage/v1/object/public/galeria/placeholder-persona.jpg',
   },
   {
     nombre: 'Jacob Antonio Arredondo Caro',
@@ -36,7 +36,7 @@ export const mentores = [
     telefono: 'Contacto pendiente',
     email: 'Correo pendiente',
     linkedin: '[aquí iría el link del LinkedIn]',
-    imagen: '/imagenes-club/mentores/jacob-arredondo.jpg',
+    imagen: 'https://yvucnogpwegdmxgeeyjw.supabase.co/storage/v1/object/public/galeria/placeholder-persona.jpg',
   },
   {
     nombre: 'Robinson Fernando Soto Fuentes',
@@ -49,7 +49,7 @@ export const mentores = [
     telefono: 'Contacto pendiente',
     email: 'Correo pendiente',
     linkedin: '[aquí iría el link del LinkedIn]',
-    imagen: '/imagenes-club/mentores/robinson-soto.jpg',
+    imagen: 'https://yvucnogpwegdmxgeeyjw.supabase.co/storage/v1/object/public/galeria/placeholder-persona.jpg',
   },
   {
     nombre: 'Sebastian Felipe Antiman',
@@ -62,7 +62,7 @@ export const mentores = [
     telefono: 'Contacto pendiente',
     email: 'Correo pendiente',
     linkedin: '[aquí iría el link del LinkedIn]',
-    imagen: '/imagenes-club/mentores/sebastian-antiman.jpg',
+    imagen: 'https://yvucnogpwegdmxgeeyjw.supabase.co/storage/v1/object/public/galeria/placeholder-persona.jpg',
   },
   {
     nombre: 'Francisco Videla C.',
@@ -75,7 +75,7 @@ export const mentores = [
     telefono: 'Contacto pendiente',
     email: 'Correo pendiente',
     linkedin: '[aquí iría el link del LinkedIn]',
-    imagen: '/imagenes-club/mentores/francisco-videla.jpg',
+    imagen: 'https://yvucnogpwegdmxgeeyjw.supabase.co/storage/v1/object/public/galeria/placeholder-persona.jpg',
   },
   {
     nombre: 'Vicente Pareja Jones',
@@ -88,6 +88,6 @@ export const mentores = [
     telefono: 'Contacto pendiente',
     email: 'Correo pendiente',
     linkedin: '[aquí iría el link del LinkedIn]',
-    imagen: '/imagenes-club/mentores/vicente-pareja.jpg',
+    imagen: 'https://yvucnogpwegdmxgeeyjw.supabase.co/storage/v1/object/public/galeria/placeholder-persona.jpg',
   },
 ];
