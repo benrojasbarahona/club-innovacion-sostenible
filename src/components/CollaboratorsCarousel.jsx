@@ -59,8 +59,8 @@ function CollaboratorsCarousel() {
         aria-label="Carrusel de colaboradores"
       >
         <div className="collaborators-container">
-          {colaboradores.map((c) => (
-            <article key={c.nombre} className="collaborator-slide">
+          {[...colaboradores, ...colaboradores, ...colaboradores, ...colaboradores].map((c, i) => (
+            <article key={`${c.nombre}-${i}`} className="collaborator-slide" aria-hidden={i >= colaboradores.length}>
               <div className="h-full rounded-2xl overflow-hidden bg-white/[0.04] border border-white/[0.08] hover:border-orange-500/22 hover:bg-white/[0.06] transition-all duration-300 flex flex-col">
                 {/* Logo area */}
                 <div className="flex items-center justify-center h-32 bg-white/[0.02] border-b border-white/[0.06] px-6">
