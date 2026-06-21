@@ -25,7 +25,7 @@ function Coordinators() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-4xl mx-auto">
+        <div className="grid sm:grid-cols-2 gap-5 max-w-3xl mx-auto">
           {coordinadores.map((coordinator, index) => (
             <article
               key={`${coordinator.nombre}-${coordinator.cargo}-${index}`}
@@ -35,7 +35,7 @@ function Coordinators() {
                 <img
                   src={coordinator.imagen}
                   alt={`Imagen de ${coordinator.nombre}`}
-                  className="w-full h-full object-cover opacity-38 group-hover:opacity-52 transition-opacity duration-300"
+                  className="w-full h-full object-cover object-[center_20%] opacity-80 group-hover:opacity-100 transition-opacity duration-300"
                 />
               </div>
               <div className="p-5">
@@ -45,7 +45,9 @@ function Coordinators() {
                 <h3 className="font-bold text-white text-[0.92rem] mb-1 leading-snug">
                   {coordinator.nombre}
                 </h3>
-                <p className="text-xs text-white/45 mb-3">{coordinator.carrera}</p>
+                {coordinator.carrera && (
+                  <p className="text-xs text-white/45 mb-3">{coordinator.carrera}</p>
+                )}
                 <a
                   href={`mailto:${coordinator.contacto}`}
                   className="text-xs text-purple-400/70 hover:text-orange-400 transition-colors duration-200 font-medium break-all"

@@ -5,7 +5,8 @@ export const proyectos = [
       'Encuentro para conocer el Club, sus actividades semestrales y la forma de participar activamente en la comunidad.',
     fecha: 'Lunes 23 de marzo, 15:50 a 17:20 hrs',
     categoria: 'Convocatoria',
-    imagen: '/imagenes-club/hall-central.jpg',
+    imagen: '/imagenes-club/galeria/cis-uach-82.jpg',
+    imagenAlt: 'Integrantes del club reunidos frente al Centro 14K',
   },
   {
     nombre: 'Reuniones periódicas del club',
@@ -13,7 +14,8 @@ export const proyectos = [
       'Sesiones de trabajo en horario protegido para colaborar con estudiantes de distintas carreras y avanzar en proyectos sostenibles.',
     fecha: 'Lunes de 15:50 a 17:20 hrs',
     categoria: 'Comunidad estudiantil',
-    imagen: '/imagenes-club/ED_14K_AR_WES_219.jpg',
+    imagen: '/imagenes-club/galeria/actividad-2443.jpg',
+    imagenAlt: 'Estudiantes compartiendo una actividad del club',
   },
   {
     nombre: 'Talleres de innovación',
@@ -21,7 +23,8 @@ export const proyectos = [
       'Instancias prácticas para desarrollar competencias en metodologías de innovación, creatividad y prototipado.',
     fecha: 'Programación semestral',
     categoria: 'Formación',
-    imagen: '/imagenes-club/placeholder-actividad.jpg',
+    imagen: '/imagenes-club/galeria/actividad-0740.jpg',
+    imagenAlt: 'Jornada de aprendizaje sobre innovación y emprendimiento',
   },
   {
     nombre: 'Proyectos sostenibles',
@@ -29,7 +32,8 @@ export const proyectos = [
       'Equipos multidisciplinarios que transforman ideas en soluciones viables para desafíos locales, regionales y globales.',
     fecha: 'Trabajo continuo',
     categoria: 'Proyectos',
-    imagen: '/imagenes-club/201103_W_P_Edificio-14K_Foto-de-portada.jpg',
+    imagen: '/imagenes-club/galeria/actividad-1030.jpg',
+    imagenAlt: 'Experiencia de innovación compartida por integrantes del club',
   },
   {
     nombre: 'Charlas y conversatorios',
@@ -37,7 +41,8 @@ export const proyectos = [
       'Espacios para conectar aprendizajes, experiencias y oportunidades en innovación sostenible, emprendimiento e impacto territorial.',
     fecha: 'Fechas por confirmar',
     categoria: 'Vinculación',
-    imagen: '/imagenes-club/ED_14K_AR_WES_84.jpg',
+    imagen: '/imagenes-club/galeria/actividad-0745.jpg',
+    imagenAlt: 'Conversatorio durante una actividad de innovación',
   },
   {
     nombre: 'Vinculación con empresas',
@@ -45,6 +50,7 @@ export const proyectos = [
       'Puentes de colaboración con organizaciones externas, la facultad y la Oficina de Innovación, Emprendimiento y Transferencia Tecnológica.',
     fecha: 'Segun oportunidades',
     categoria: 'Alianzas',
-    imagen: '/imagenes-club/placeholder-edificio.jpg',
+    imagen: '/imagenes-club/galeria/actividad-6287.jpg',
+    imagenAlt: 'Encuentro de vinculación de la comunidad del club',
   },
 ];

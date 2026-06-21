@@ -34,8 +34,8 @@ function Projects() {
               <div className="overflow-hidden h-44 bg-[#0d0825]">
                 <img
                   src={project.imagen}
-                  alt={`Imagen referencial de ${project.nombre}`}
-                  className="w-full h-full object-cover opacity-55 group-hover:opacity-70 group-hover:scale-105 transition-all duration-500"
+                  alt={project.imagenAlt}
+                  className="w-full h-full object-cover opacity-75 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                 />
               </div>
               <div className="p-5">

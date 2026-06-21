@@ -1,6 +1,7 @@
 import { useCallback, useState } from 'react';
 import Header from './components/Header.jsx';
 import Hero from './components/Hero.jsx';
+import ClubGallery from './components/ClubGallery.jsx';
 import About from './components/About.jsx';
 import WhatWeDo from './components/WhatWeDo.jsx';
 import Projects from './components/Projects.jsx';
@@ -31,6 +32,7 @@ function App() {
       <Header />
       <main>
         <Hero />
+        <ClubGallery />
         <About />
         <WhatWeDo />
         <Projects />
