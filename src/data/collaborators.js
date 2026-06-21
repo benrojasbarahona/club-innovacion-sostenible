@@ -1,4 +1,4 @@
-const STORAGE = 'https://yvucnogpwegdmxgeeyjw.supabase.co/storage/v1/object/public'
+const COLAB = 'https://yvucnogpwegdmxgeeyjw.supabase.co/storage/v1/object/public/colaboradores'
 
 export const colaboradores = [
   {
@@ -7,7 +7,7 @@ export const colaboradores = [
     institucion: 'Global Shapers Community',
     tipo: 'Ecosistema',
     descripcion: 'Organización vinculada a redes de liderazgo joven, innovación e impacto.',
-    imagen: `${STORAGE}/logos/logo-generico.png`,
+    imagen: `${COLAB}/global_shapers.png`,
   },
   {
     nombre: 'Municipalidad Valdivia TV',
@@ -15,7 +15,7 @@ export const colaboradores = [
     institucion: 'Municipalidad de Valdivia',
     tipo: 'Difusión',
     descripcion: 'Espacio asociado a comunicación, territorio y visibilización de iniciativas locales.',
-    imagen: `${STORAGE}/logos/logo-generico.png`,
+    imagen: `${COLAB}/municipalidad_valdivia.png`,
   },
   {
     nombre: 'World Economic Forum',
@@ -23,7 +23,7 @@ export const colaboradores = [
     institucion: 'World Economic Forum',
     tipo: 'Ecosistema global',
     descripcion: 'Organización internacional vinculada a innovación, economía, sostenibilidad y desarrollo.',
-    imagen: `${STORAGE}/logos/logo-generico.png`,
+    imagen: `${COLAB}/forum_economic.png`,
   },
   {
     nombre: 'EtMday',
@@ -31,7 +31,7 @@ export const colaboradores = [
     institucion: 'Emprende tu Mente',
     tipo: 'Evento',
     descripcion: 'Evento de emprendimiento e innovación que conecta startups, empresas, instituciones y comunidades.',
-    imagen: `${STORAGE}/logos/logo-generico.png`,
+    imagen: `${COLAB}/etm.png`,
   },
   {
     nombre: 'Alianza Emprende',
@@ -39,7 +39,7 @@ export const colaboradores = [
     institucion: 'Alianza Emprende',
     tipo: 'Colaborador',
     descripcion: 'Iniciativa vinculada al fortalecimiento del ecosistema emprendedor.',
-    imagen: `${STORAGE}/logos/logo-generico.png`,
+    imagen: `${COLAB}/alianza_emprende.png`,
   },
   {
     nombre: 'VC Group Chile',
@@ -47,7 +47,7 @@ export const colaboradores = [
     institucion: 'VC Group Chile',
     tipo: 'Invitado / Colaborador',
     descripcion: 'Organización vinculada a inversión, escalamiento y financiamiento de emprendimientos.',
-    imagen: `${STORAGE}/logos/logo-generico.png`,
+    imagen: `${COLAB}/vc_group.png`,
   },
   {
     nombre: 'Plastic Oceans',
@@ -55,7 +55,7 @@ export const colaboradores = [
     institucion: 'Plastic Oceans',
     tipo: 'Organización ambiental',
     descripcion: 'Organización enfocada en educación, conciencia ambiental y reducción de contaminación por plásticos.',
-    imagen: `${STORAGE}/logos/logo-generico.png`,
+    imagen: `${COLAB}/plastic_oceans.png`,
   },
   {
     nombre: 'Founder Institute',
@@ -63,6 +63,6 @@ export const colaboradores = [
     institucion: 'Founder Institute',
     tipo: 'Ecosistema startup',
     descripcion: 'Red internacional de formación, mentoría y aceleración para emprendimientos en etapa temprana.',
-    imagen: `${STORAGE}/logos/logo-generico.png`,
+    imagen: `${COLAB}/founder_institute.png`,
   },
 ]
