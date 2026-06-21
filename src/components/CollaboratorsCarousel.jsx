@@ -63,11 +63,11 @@ function CollaboratorsCarousel() {
             <article key={`${c.nombre}-${i}`} className="collaborator-slide" aria-hidden={i >= colaboradores.length}>
               <div className="h-full rounded-2xl overflow-hidden bg-white/[0.04] border border-white/[0.08] hover:border-orange-500/22 hover:bg-white/[0.06] transition-all duration-300 flex flex-col">
                 {/* Logo area */}
-                <div className="flex items-center justify-center h-32 bg-white/[0.02] border-b border-white/[0.06] px-6">
+                <div className="flex items-center justify-center h-44 bg-white/[0.02] border-b border-white/[0.06] px-6">
                   <img
                     src={c.imagen}
                     alt={`Logo de ${c.nombre}`}
-                    className="max-h-14 w-auto object-contain opacity-55 hover:opacity-85 transition-opacity duration-300"
+                    className="max-h-28 w-full object-contain opacity-60 hover:opacity-90 transition-opacity duration-300"
                     onError={(e) => {
                       e.currentTarget.src = 'https://yvucnogpwegdmxgeeyjw.supabase.co/storage/v1/object/public/colaboradores/logo-generico.png';
                     }}
