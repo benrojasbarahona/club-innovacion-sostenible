@@ -15,12 +15,12 @@ function HomePage({ onSubmitMessage }) {
   return (
     <main id="main-content">
       <Hero />
-      <ClubGallery />
       <About />
       <WhatWeDo />
       <Projects />
       <CollaboratorsCarousel />
       <Coordinators />
+      <ClubGallery />
       <Statutes />
       <Location />
       <InstitutionalLink />
