@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const initialForm = { name: '', email: '', area: '', message: '' };
+const initialForm = { name: '', email: '', area: '', message: '', website: '' };
 
 const inputCls =
   'w-full px-4 py-3 bg-white/[0.04] border border-white/[0.08] focus:border-orange-500/40 focus:bg-white/[0.07] rounded-xl text-white placeholder:text-white/25 text-sm outline-none transition-all duration-200 caret-orange-500';
@@ -9,16 +9,46 @@ const labelCls =
 
 function Contact({ onSubmitMessage }) {
   const [form, setForm] = useState(initialForm);
+  const [submitState, setSubmitState] = useState('idle');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm((c) => ({ ...c, [name]: value }));
+    if (submitState !== 'sending') {
+      setSubmitState('idle');
+      setErrorMessage('');
+    }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    onSubmitMessage('Mensaje registrado. Pronto nos pondremos en contacto.');
-    setForm(initialForm);
+    setSubmitState('sending');
+    setErrorMessage('');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        throw new Error(result.error || 'No pudimos enviar el mensaje.');
+      }
+
+      setForm(initialForm);
+      setSubmitState('success');
+      onSubmitMessage?.('Mensaje enviado. Pronto nos pondremos en contacto.');
+    } catch (error) {
+      setSubmitState('error');
+      setErrorMessage(
+        error.message ||
+          'No pudimos enviar el mensaje. También puedes escribirnos directamente por correo.',
+      );
+    }
   };
 
   return (
@@ -52,7 +82,12 @@ function Contact({ onSubmitMessage }) {
                 <p className="text-[0.65rem] font-black tracking-[0.16em] uppercase text-orange-400 mb-1.5">
                   Email
                 </p>
-                <p className="text-sm text-white/75 font-medium">clubinnovacion@uach.cl</p>
+                <a
+                  href="mailto:clubinnovacion@uach.cl"
+                  className="text-sm text-white/75 font-medium transition-colors hover:text-orange-400"
+                >
+                  clubinnovacion@uach.cl
+                </a>
               </div>
               <div className="border-t border-white/[0.06] pt-5">
                 <p className="text-[0.65rem] font-black tracking-[0.16em] uppercase text-orange-400 mb-1.5">
@@ -71,8 +106,22 @@ function Contact({ onSubmitMessage }) {
           {/* Form */}
           <form
             onSubmit={handleSubmit}
-            className="p-7 sm:p-8 rounded-2xl bg-white/[0.025] border border-white/[0.07] space-y-5"
+            aria-busy={submitState === 'sending'}
+            className="relative p-7 sm:p-8 rounded-2xl bg-white/[0.025] border border-white/[0.07] space-y-5"
           >
+            <div className="absolute -left-[9999px] h-px w-px overflow-hidden" aria-hidden="true">
+              <label>
+                Sitio web
+                <input
+                  type="text"
+                  name="website"
+                  value={form.website}
+                  onChange={handleChange}
+                  tabIndex="-1"
+                  autoComplete="off"
+                />
+              </label>
+            </div>
             <div className="grid sm:grid-cols-2 gap-5">
               <label>
                 <span className={labelCls}>Nombre</span>
@@ -82,6 +131,7 @@ function Contact({ onSubmitMessage }) {
                   value={form.name}
                   onChange={handleChange}
                   autoComplete="name"
+                  maxLength={100}
                   required
                   className={inputCls}
                   placeholder="Tu nombre"
@@ -95,6 +145,7 @@ function Contact({ onSubmitMessage }) {
                   value={form.email}
                   onChange={handleChange}
                   autoComplete="email"
+                  maxLength={254}
                   required
                   className={inputCls}
                   placeholder="tu@email.com"
@@ -110,6 +161,7 @@ function Contact({ onSubmitMessage }) {
                 value={form.area}
                 onChange={handleChange}
                 required
+                maxLength={120}
                 className={inputCls}
                 placeholder="Ingeniería Civil, Diseño..."
               />
@@ -123,6 +175,7 @@ function Contact({ onSubmitMessage }) {
                 onChange={handleChange}
                 rows={5}
                 required
+                maxLength={3000}
                 className={`${inputCls} resize-none`}
                 placeholder="Cuéntanos qué tienes en mente..."
               />
@@ -130,10 +183,20 @@ function Contact({ onSubmitMessage }) {
 
             <button
               type="submit"
-              className="w-full py-3.5 bg-orange-500 hover:bg-orange-400 text-black font-bold rounded-xl transition-all duration-200 hover:shadow-[0_8px_28px_rgba(249,161,9,0.3)] text-sm"
+              disabled={submitState === 'sending'}
+              className="w-full py-3.5 bg-orange-500 hover:bg-orange-400 disabled:bg-orange-500/60 disabled:cursor-wait text-black font-bold rounded-xl transition-all duration-200 hover:shadow-[0_8px_28px_rgba(249,161,9,0.3)] text-sm"
             >
-              Enviar mensaje
+              {submitState === 'sending' ? 'Enviando…' : 'Enviar mensaje'}
             </button>
+
+            {errorMessage && (
+              <p
+                className="rounded-xl border border-red-400/20 bg-red-400/[0.07] px-4 py-3 text-sm text-red-200"
+                role="alert"
+              >
+                {errorMessage}
+              </p>
+            )}
           </form>
         </div>
       </div>
