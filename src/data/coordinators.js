@@ -2,7 +2,7 @@ const STORAGE = 'https://yvucnogpwegdmxgeeyjw.supabase.co/storage/v1/object/publ
 
 export const coordinadores = [
   {
-    nombre: 'Daniela Veloso',
+    nombre: 'Daniela Veloso Arias',
     cargo: 'Coordinación general',
     contacto: 'daniela.veloso@alumnos.uach.cl',
     imagen: `${STORAGE}/coordinadores/daniela.jpg`,
@@ -12,5 +12,11 @@ export const coordinadores = [
     cargo: 'Coordinación general',
     contacto: 'benjamin.rojas02@alumnos.uach.cl',
     imagen: `${STORAGE}/coordinadores/benjamin.jpg`,
+  },
+  {
+    nombre: 'Sady Barra Zambrano',
+    cargo: 'Coordinador general',
+    contacto: 'sady.barra@alumnos.uach.cl',
+    imagen: `${STORAGE}/coordinadores/sady.png`,
   },
 ]

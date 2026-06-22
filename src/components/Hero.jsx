@@ -2,7 +2,7 @@ function Hero() {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen flex items-center overflow-hidden bg-[#06030f]"
+      className="relative min-h-[calc(100vh-var(--header-height))] overflow-hidden bg-[#06030f]"
       aria-labelledby="hero-title"
     >
       {/* Grid overlay */}
@@ -14,15 +14,17 @@ function Hero() {
       <div className="orb-3 pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] rounded-full bg-purple-700/[0.18] blur-[90px]" />
 
       {/* Content */}
-      <div className="section-shell relative z-10 grid lg:grid-cols-[1fr_400px] gap-14 items-center w-full py-20 pt-[calc(var(--header-height)+80px)] pb-24">
+      <div className="section-shell relative z-10 grid lg:grid-cols-[1fr_400px] gap-14 items-start w-full py-12 sm:py-14 lg:py-16">
 
         {/* Copy */}
         <div>
-          <img
-            className="w-44 sm:w-52 mb-7 drop-shadow-[0_0_32px_rgba(249,161,9,0.2)]"
-            src="https://yvucnogpwegdmxgeeyjw.supabase.co/storage/v1/object/public/logos/logo_blanco.png"
-            alt="Logo blanco del Club de Innovación Sostenible UACh"
-          />
+          <div className="h-[96px] sm:h-[104px] mb-7 overflow-hidden">
+            <img
+              className="w-48 sm:w-56 -translate-y-[59px] sm:-translate-y-[69px] drop-shadow-[0_0_32px_rgba(249,161,9,0.2)]"
+              src="https://yvucnogpwegdmxgeeyjw.supabase.co/storage/v1/object/public/logos/logo_blanco.png"
+              alt="Logo blanco del Club de Innovación Sostenible UACh"
+            />
+          </div>
 
           <p className="mb-4 text-[0.72rem] font-black tracking-[0.22em] uppercase text-orange-500">
             Construyendo el futuro sostenible
@@ -77,7 +79,7 @@ function Hero() {
         >
           <div className="overflow-hidden aspect-[4/3]">
             <img
-              src="https://yvucnogpwegdmxgeeyjw.supabase.co/storage/v1/object/public/galeria/201103_W_P_Edificio-14K_Foto-de-portada.jpg"
+              src="https://yvucnogpwegdmxgeeyjw.supabase.co/storage/v1/object/public/galeria/cis-uach-82.jpg"
               alt="Edificio 14K de la Universidad Austral de Chile"
               className="w-full h-full object-cover opacity-70"
             />
