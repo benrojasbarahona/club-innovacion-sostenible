@@ -19,7 +19,7 @@ function Hero() {
         {/* Copy */}
         <div>
           <img
-            className="w-32 mb-7 drop-shadow-[0_0_32px_rgba(249,161,9,0.2)]"
+            className="w-44 sm:w-52 mb-7 drop-shadow-[0_0_32px_rgba(249,161,9,0.2)]"
             src="https://yvucnogpwegdmxgeeyjw.supabase.co/storage/v1/object/public/logos/logo_blanco.png"
             alt="Logo blanco del Club de Innovación Sostenible UACh"
           />

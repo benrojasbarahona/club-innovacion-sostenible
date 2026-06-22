@@ -48,7 +48,7 @@ function Header() {
           <img
             src="https://yvucnogpwegdmxgeeyjw.supabase.co/storage/v1/object/public/logos/logo_blanco.png"
             alt="Logo Club de Innovación Sostenible UACh"
-            className="w-9 h-9 object-contain transition-transform duration-300 group-hover:scale-105"
+            className="w-20 h-10 sm:w-24 sm:h-11 object-contain transition-transform duration-300 group-hover:scale-105"
           />
           <span className="hidden sm:block text-[0.78rem] font-black tracking-[0.18em] text-white/90 uppercase">
             cis<span className="text-orange-500">.</span>uach
