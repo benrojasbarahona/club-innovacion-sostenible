@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 
+const JOIN_FORM_URL = 'https://forms.cloud.microsoft/r/LVHVn0VQBP?origin=lprLink';
+
 const navLinks = [
   { href: '#inicio', label: 'Inicio' },
   { href: '#sobre-nosotros', label: 'Sobre nosotros' },
@@ -11,7 +13,7 @@ const navLinks = [
   { href: '#estatutos', label: 'Estatutos' },
   { href: '#ubicacion', label: 'Ubicación' },
   { href: '#contacto', label: 'Contacto' },
-  { href: '#ser-parte', label: 'Ser parte' },
+  { href: JOIN_FORM_URL, label: 'Ser parte' },
 ];
 
 function Header() {
@@ -70,7 +72,9 @@ function Header() {
 
         <div className="flex items-center gap-3 shrink-0">
           <a
-            href={isHomePage ? '#ser-parte' : '/#ser-parte'}
+            href={JOIN_FORM_URL}
+            target="_blank"
+            rel="noreferrer"
             className="hidden sm:inline-flex items-center px-4 py-2 text-[0.82rem] font-bold bg-orange-500 hover:bg-orange-400 text-black rounded-xl transition-all duration-150 hover:shadow-[0_4px_20px_rgba(249,161,9,0.35)] whitespace-nowrap"
           >
             Ser parte
@@ -104,6 +108,8 @@ function Header() {
                 key={link.href}
                 href={resolveHref(link.href)}
                 onClick={closeMenu}
+                target={link.href === JOIN_FORM_URL ? '_blank' : undefined}
+                rel={link.href === JOIN_FORM_URL ? 'noreferrer' : undefined}
                 className="px-4 py-2.5 text-sm text-white/60 hover:text-white hover:bg-white/[0.04] rounded-xl transition-all duration-150 font-medium"
               >
                 {link.label}

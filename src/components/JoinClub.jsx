@@ -48,7 +48,9 @@ function JoinClub() {
               participar activamente en al menos el 70% de las sesiones.
             </p>
             <a
-              href="#contacto"
+              href="https://forms.cloud.microsoft/r/LVHVn0VQBP?origin=lprLink"
+              target="_blank"
+              rel="noreferrer"
               className="mt-8 inline-flex items-center gap-2 px-6 py-3 bg-orange-500 hover:bg-orange-400 text-black font-bold rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(249,161,9,0.35)] text-sm"
             >
               Quiero ser parte

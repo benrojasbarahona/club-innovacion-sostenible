@@ -52,7 +52,9 @@ function Hero() {
 
           <div className="mt-8 flex flex-wrap gap-3" aria-label="Acciones principales">
             <a
-              href="#ser-parte"
+              href="https://forms.cloud.microsoft/r/LVHVn0VQBP?origin=lprLink"
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-orange-500 hover:bg-orange-400 text-black font-bold rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(249,161,9,0.4)] text-sm"
             >
               Ser parte del club
