@@ -10,7 +10,7 @@ export const mentores = [
     telefono: 'Contacto pendiente',
     email: 'Correo pendiente',
     linkedin: '[aquí iría el link del LinkedIn]',
-    imagen: 'https://yvucnogpwegdmxgeeyjw.supabase.co/storage/v1/object/public/galeria/placeholder-persona.jpg',
+    imagen: 'https://yvucnogpwegdmxgeeyjw.supabase.co/storage/v1/object/public/mentores/veronika_fischer.png',
   },
   {
     nombre: 'Joaquín Contreras Ovalle',
