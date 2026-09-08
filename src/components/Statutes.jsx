@@ -1,3 +1,5 @@
+import { withBase } from '../lib/paths.js';
+
 function Statutes() {
   return (
     <section
@@ -24,7 +26,7 @@ function Statutes() {
           </div>
 
           <a
-            href="https://yvucnogpwegdmxgeeyjw.supabase.co/storage/v1/object/public/documentos/estatutos.pdf"
+            href={withBase('documentos/estatutos.pdf')}
             target="_blank"
             rel="noopener noreferrer"
             className="relative z-10 shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-white/[0.07] hover:bg-white/[0.12] border border-white/[0.14] hover:border-white/25 text-white font-bold rounded-xl transition-all duration-200 text-sm"

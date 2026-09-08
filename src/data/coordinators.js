@@ -1,4 +1,4 @@
-const STORAGE = 'https://yvucnogpwegdmxgeeyjw.supabase.co/storage/v1/object/public'
+const STORAGE = `${import.meta.env.BASE_URL}imagenes-club`
 
 export const coordinadores = [
   {

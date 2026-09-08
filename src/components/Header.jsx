@@ -1,13 +1,15 @@
 import { useState, useEffect } from 'react';
+import { withBase } from '../lib/paths.js';
 
 const JOIN_FORM_URL = 'https://forms.cloud.microsoft/r/LVHVn0VQBP?origin=lprLink';
+const MENTORS_PATH = '/mentores';
 
 const navLinks = [
   { href: '#inicio', label: 'Inicio' },
   { href: '#sobre-nosotros', label: 'Sobre nosotros' },
   { href: '#que-hacemos', label: 'Qué hacemos' },
   { href: '#proyectos', label: 'Proyectos' },
-  { href: '/mentores', label: 'Red de Mentores' },
+  { href: MENTORS_PATH, label: 'Red de Mentores' },
   { href: '#colaboradores', label: 'Colaboradores' },
   { href: '#coordinadores', label: 'Coordinadores' },
   { href: '#estatutos', label: 'Estatutos' },
@@ -27,8 +29,12 @@ function Header() {
   }, []);
 
   const closeMenu = () => setIsOpen(false);
-  const isHomePage = window.location.pathname === '/';
-  const resolveHref = (href) => (href.startsWith('#') && !isHomePage ? `/${href}` : href);
+  const isHomePage = window.location.pathname === withBase();
+  const resolveHref = (href) => {
+    if (href.startsWith('#')) return isHomePage ? href : withBase(href);
+    if (href === MENTORS_PATH) return withBase('mentores');
+    return href;
+  };
 
   return (
     <header
@@ -46,9 +52,9 @@ function Header() {
         aria-label="Navegación principal"
       >
         {/* Brand */}
-        <a href="/#inicio" onClick={closeMenu} className="flex items-center gap-2.5 shrink-0 group">
+        <a href={withBase('#inicio')} onClick={closeMenu} className="flex items-center gap-2.5 shrink-0 group">
           <img
-            src="https://yvucnogpwegdmxgeeyjw.supabase.co/storage/v1/object/public/logos/logo_blanco.png"
+            src={withBase('imagenes-club/logos/logo_blanco.png')}
             alt="Logo Club de Innovación Sostenible UACh"
             className="w-20 h-10 sm:w-24 sm:h-11 object-contain transition-transform duration-300 group-hover:scale-105"
           />

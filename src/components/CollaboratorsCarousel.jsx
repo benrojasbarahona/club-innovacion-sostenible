@@ -2,6 +2,7 @@ import { useMemo } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import AutoScroll from 'embla-carousel-auto-scroll';
 import { colaboradores } from '../data/collaborators.js';
+import { withBase } from '../lib/paths.js';
 
 const COLLABORATOR_AUTO_SCROLL_SPEED = 0.7;
 
@@ -69,7 +70,7 @@ function CollaboratorsCarousel() {
                     alt={`Logo de ${c.nombre}`}
                     className="max-h-14 w-auto object-contain opacity-55 hover:opacity-85 transition-opacity duration-300"
                     onError={(e) => {
-                      e.currentTarget.src = 'https://yvucnogpwegdmxgeeyjw.supabase.co/storage/v1/object/public/logos/logo-generico.png';
+                      e.currentTarget.src = withBase('imagenes-club/logos/logo-generico.png');
                     }}
                   />
                 </div>

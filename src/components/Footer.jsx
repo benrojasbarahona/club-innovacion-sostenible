@@ -1,14 +1,22 @@
+import { withBase } from '../lib/paths.js';
+
+const MENTORS_PATH = '/mentores';
+
 const quickLinks = [
   { href: '#sobre-nosotros', label: 'Sobre nosotros' },
   { href: '#que-hacemos', label: 'Qué hacemos' },
   { href: '#proyectos', label: 'Proyectos' },
-  { href: '/mentores', label: 'Red de Mentores' },
+  { href: MENTORS_PATH, label: 'Red de Mentores' },
   { href: '#contacto', label: 'Contacto' },
 ];
 
 function Footer() {
-  const isHomePage = window.location.pathname === '/';
-  const resolveHref = (href) => (href.startsWith('#') && !isHomePage ? `/${href}` : href);
+  const isHomePage = window.location.pathname === withBase();
+  const resolveHref = (href) => {
+    if (href.startsWith('#')) return isHomePage ? href : withBase(href);
+    if (href === MENTORS_PATH) return withBase('mentores');
+    return href;
+  };
 
   return (
     <footer className="relative bg-[#06030f] border-t border-white/[0.05]">
@@ -21,7 +29,7 @@ function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <img
-                src="https://yvucnogpwegdmxgeeyjw.supabase.co/storage/v1/object/public/logos/logo_blanco.png"
+                src={withBase('imagenes-club/logos/logo_blanco.png')}
                 alt="Logo Club de Innovación Sostenible UACh"
                 className="w-11 h-11 object-contain opacity-90"
               />

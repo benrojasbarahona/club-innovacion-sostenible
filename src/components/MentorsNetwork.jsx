@@ -1,7 +1,8 @@
 import { mentores } from '../data/mentors.js';
+import { withBase } from '../lib/paths.js';
 
 const linkedInPendingText = '[aquí iría el link del LinkedIn]';
-const fallbackImage = 'https://yvucnogpwegdmxgeeyjw.supabase.co/storage/v1/object/public/galeria/placeholder-persona.jpg';
+const fallbackImage = withBase('imagenes-club/galeria/placeholder-persona.jpg');
 
 function MentorsNetwork({ onSchedule }) {
   const handleSchedule = (mentorName) => {

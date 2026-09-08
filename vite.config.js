@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
+  base: '/club-innovacion-sostenible/',
   esbuild: {
     jsx: 'automatic',
   },

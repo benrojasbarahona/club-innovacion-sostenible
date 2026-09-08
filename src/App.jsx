@@ -4,13 +4,14 @@ import Footer from './components/Footer.jsx';
 import Toast from './components/Toast.jsx';
 import HomePage from './pages/HomePage.jsx';
 import MentorsPage from './pages/MentorsPage.jsx';
+import { withBase } from './lib/paths.js';
 
 const normalizePath = (path) => path.replace(/\/+$/, '') || '/';
 
 function App() {
   const [toast, setToast] = useState(null);
   const currentPath = normalizePath(window.location.pathname);
-  const isMentorsPage = currentPath === '/mentores';
+  const isMentorsPage = currentPath === normalizePath(withBase('mentores'));
 
   useEffect(() => {
     document.title = isMentorsPage
@@ -32,7 +33,7 @@ function App() {
       {isMentorsPage ? (
         <MentorsPage onSchedule={showToast} />
       ) : (
-        <HomePage onSubmitMessage={showToast} />
+        <HomePage />
       )}
       <Footer />
       <Toast message={toast} onClose={closeToast} />

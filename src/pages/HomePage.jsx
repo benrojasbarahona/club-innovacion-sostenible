@@ -11,7 +11,7 @@ import InstitutionalLink from '../components/InstitutionalLink.jsx';
 import JoinClub from '../components/JoinClub.jsx';
 import Contact from '../components/Contact.jsx';
 
-function HomePage({ onSubmitMessage }) {
+function HomePage() {
   return (
     <main id="main-content">
       <Hero />
@@ -25,7 +25,7 @@ function HomePage({ onSubmitMessage }) {
       <Location />
       <InstitutionalLink />
       <JoinClub />
-      <Contact onSubmitMessage={onSubmitMessage} />
+      <Contact />
     </main>
   );
 }
