@@ -23,9 +23,12 @@ jobs:
           node-version: 20
 
       - name: Fetch images from Supabase
+        id: fetch
+        continue-on-error: true
         run: node scripts/fetch-images.mjs
 
       - name: Commit downloaded images
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -36,3 +39,9 @@ jobs:
             git commit -m "chore: descargar imágenes a public/imagenes-club"
             git push
           fi
+
+      - name: Fail if some downloads didn't succeed
+        if: steps.fetch.outcome == 'failure'
+        run: |
+          echo "Algunos archivos no se pudieron descargar — revisa el log del paso 'Fetch images from Supabase' arriba. Las imágenes que sí se descargaron ya quedaron commiteadas."
+          exit 1
