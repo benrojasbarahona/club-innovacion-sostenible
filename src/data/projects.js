@@ -23,7 +23,7 @@ export const proyectos = [
       'Instancias prácticas para desarrollar competencias en metodologías de innovación, creatividad y prototipado.',
     fecha: 'Programación semestral',
     categoria: 'Formación',
-    imagen: `${import.meta.env.BASE_URL}imagenes-club/galeria/actividad-0740.jpg`,
+    imagen: `${import.meta.env.BASE_URL}imagenes-club/galeria/IMG_1236.webp`,
     imagenAlt: 'Jornada de aprendizaje sobre innovación y emprendimiento',
   },
   {
