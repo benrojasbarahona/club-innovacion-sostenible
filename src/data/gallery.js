@@ -14,7 +14,7 @@ export const fotosDelClub = [
     height: 1350,
   },
   {
-    src: `${STORAGE}/galeria/actividad-0740.jpg`,
+    src: `${STORAGE}/galeria/IMG_1236.webp`,
     alt: 'Actividad de innovación y emprendimiento visitada por integrantes del club',
     width: 1350,
     height: 1800,
