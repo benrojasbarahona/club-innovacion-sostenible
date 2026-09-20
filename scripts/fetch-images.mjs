@@ -78,21 +78,31 @@ const FILES = [
   { remote: 'documentos/estatutos.pdf', local: 'documentos/estatutos.pdf' },
 ];
 
+const MAX_ATTEMPTS = 3;
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
 async function download({ remote, local }) {
   const url = `${SUPABASE_BASE}/${remote}`;
   const destPath = join(PUBLIC_DIR, local);
 
-  const response = await fetch(url);
-  if (!response.ok) {
-    console.error(`✗ ${remote} — HTTP ${response.status}`);
-    return false;
-  }
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt += 1) {
+    try {
+      const response = await fetch(url);
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
 
-  const buffer = Buffer.from(await response.arrayBuffer());
-  await mkdir(dirname(destPath), { recursive: true });
-  await writeFile(destPath, buffer);
-  console.log(`✓ ${local} (${(buffer.length / 1024).toFixed(0)} KB)`);
-  return true;
+      const buffer = Buffer.from(await response.arrayBuffer());
+      await mkdir(dirname(destPath), { recursive: true });
+      await writeFile(destPath, buffer);
+      console.log(`✓ ${local} (${(buffer.length / 1024).toFixed(0)} KB)`);
+      return true;
+    } catch (error) {
+      const isLastAttempt = attempt === MAX_ATTEMPTS;
+      console.error(`✗ ${remote} — intento ${attempt}/${MAX_ATTEMPTS}: ${error.message}`);
+      if (isLastAttempt) return false;
+      await sleep(1500 * attempt);
+    }
+  }
+  return false;
 }
 
 console.log(`Descargando ${FILES.length} archivos desde Supabase Storage...\n`);
