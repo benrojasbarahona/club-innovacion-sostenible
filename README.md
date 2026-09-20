@@ -39,7 +39,7 @@ Configuración única en el repo (Settings → Pages): en **Build and
 deployment → Source** selecciona **GitHub Actions**.
 
 El sitio queda disponible en
-https://benrojasbarahona.github.io/club-innovacion-sostenible/
+https://cisuach.github.io/club-innovacion-sostenible/
 
 El campo **Custom domain** de Settings → Pages debe quedar vacío mientras no
 exista un dominio propio con su DNS apuntando a GitHub: si tiene un dominio
