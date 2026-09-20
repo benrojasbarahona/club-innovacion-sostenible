@@ -9,6 +9,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 jobs:
   fetch-images:
@@ -27,8 +28,12 @@ jobs:
         continue-on-error: true
         run: node scripts/fetch-images.mjs
 
+      # Un push hecho con GITHUB_TOKEN no dispara otros workflows, así que el
+      # deploy se lanza explícitamente al final.
       - name: Commit downloaded images
         if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -38,6 +43,7 @@ jobs:
           else
             git commit -m "chore: descargar imágenes a public/imagenes-club"
             git push
+            gh workflow run deploy.yml --ref "${GITHUB_REF_NAME}"
           fi
 
       - name: Fail if some downloads didn't succeed

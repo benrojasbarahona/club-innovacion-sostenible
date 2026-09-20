@@ -22,7 +22,8 @@ npm run fetch-images
 
 También puedes correrlo desde GitHub sin tocar tu máquina: pestaña
 **Actions → Descargar imágenes a public/imagenes-club → Run workflow**. El
-workflow descarga los archivos y los commitea directo en el repo.
+workflow descarga los archivos, los commitea directo en el repo y lanza el
+deploy para publicarlos.
 
 Para agregar imágenes nuevas, súbelas directamente a `public/imagenes-club/`
 (o `public/documentos/`) y referencia la ruta en el código con el helper
