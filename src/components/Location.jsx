@@ -41,7 +41,7 @@ function Location() {
           {/* Image */}
           <div className="relative rounded-2xl overflow-hidden shadow-[0_30px_70px_rgba(0,0,0,0.55)] border border-white/[0.07]">
             <img
-              src={withBase('imagenes-club/galeria/ED_14K_AR_WES_219.jpg')}
+              src={withBase('imagenes-club/galeria/ED_14K_AR_WES_219.webp')}
               alt="Exterior del edificio 14K de la Universidad Austral de Chile"
               className="w-full h-72 lg:h-[400px] object-cover opacity-70"
             />

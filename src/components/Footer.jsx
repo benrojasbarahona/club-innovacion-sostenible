@@ -29,7 +29,7 @@ function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <img
-                src={withBase('imagenes-club/logos/logo_blanco.png')}
+                src={withBase('imagenes-club/logos/logo_blanco.webp')}
                 alt="Logo Club de Innovación Sostenible UACh"
                 className="w-11 h-11 object-contain opacity-90"
               />

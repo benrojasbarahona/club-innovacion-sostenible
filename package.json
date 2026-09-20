@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "vite build && cp dist/index.html dist/404.html",
-    "preview": "vite preview --host 0.0.0.0",
-    "fetch-images": "node scripts/fetch-images.mjs"
+    "preview": "vite preview --host 0.0.0.0"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.16",

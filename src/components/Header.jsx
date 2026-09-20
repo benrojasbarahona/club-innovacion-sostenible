@@ -54,7 +54,7 @@ function Header() {
         {/* Brand */}
         <a href={withBase('#inicio')} onClick={closeMenu} className="flex items-center gap-2.5 shrink-0 group">
           <img
-            src={withBase('imagenes-club/logos/logo_blanco.png')}
+            src={withBase('imagenes-club/logos/logo_blanco.webp')}
             alt="Logo Club de Innovación Sostenible UACh"
             className="w-20 h-10 sm:w-24 sm:h-11 object-contain transition-transform duration-300 group-hover:scale-105"
           />
