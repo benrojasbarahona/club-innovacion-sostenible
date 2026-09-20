@@ -12,23 +12,23 @@ npm run dev
 ## Imágenes
 
 Las imágenes del sitio viven en `public/imagenes-club/` (y los documentos en
-`public/documentos/`), versionadas en el repo. Si esta carpeta está vacía,
-descárgalas una vez desde el bucket de Supabase donde se subieron
-originalmente:
+`public/documentos/`), versionadas en el repo. Están en formato **WebP**, con
+un máximo de 1800px por lado, para que el sitio cargue rápido.
+
+Para agregar una imagen nueva, conviértela a WebP antes de subirla. En macOS
+basta con Terminal, sin instalar nada:
 
 ```bash
-npm run fetch-images
+sips -s format webp foto.jpg --out foto.webp
 ```
 
-También puedes correrlo desde GitHub sin tocar tu máquina: pestaña
-**Actions → Descargar imágenes a public/imagenes-club → Run workflow**. El
-workflow descarga los archivos, los commitea directo en el repo y lanza el
-deploy para publicarlos.
+Déjala en `public/imagenes-club/` (o `public/documentos/`) y referencia la ruta
+en el código con el helper `withBase()` de `src/lib/paths.js`, por ejemplo:
+`withBase('imagenes-club/galeria/nueva-foto.webp')`.
 
-Para agregar imágenes nuevas, súbelas directamente a `public/imagenes-club/`
-(o `public/documentos/`) y referencia la ruta en el código con el helper
-`withBase()` de `src/lib/paths.js`, por ejemplo:
-`withBase('imagenes-club/galeria/nueva-foto.jpg')`.
+Si la agregas a la galería (`src/data/gallery.js`), anota el `width` y `height`
+reales de la imagen: el visor a pantalla completa los usa para reservar el
+espacio correcto.
 
 ## Despliegue (GitHub Pages)
 
@@ -39,8 +39,12 @@ Configuración única en el repo (Settings → Pages): en **Build and
 deployment → Source** selecciona **GitHub Actions**.
 
 El sitio queda disponible en
-`https://benrojasbarahona/club-innovacion-sostenible`. Si usas un dominio
-propio, ajusta `base` en `vite.config.js` a `/`.
+https://benrojasbarahona.github.io/club-innovacion-sostenible/
+
+El campo **Custom domain** de Settings → Pages debe quedar vacío mientras no
+exista un dominio propio con su DNS apuntando a GitHub: si tiene un dominio
+que no resuelve, GitHub redirige el sitio hacia él y queda inaccesible. Si
+algún día se configura uno, ajusta además `base` en `vite.config.js` a `/`.
 
 ## Formulario de contacto
 

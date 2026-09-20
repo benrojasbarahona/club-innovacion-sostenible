@@ -70,7 +70,7 @@ function CollaboratorsCarousel() {
                     alt={`Logo de ${c.nombre}`}
                     className="max-h-14 w-auto object-contain opacity-55 hover:opacity-85 transition-opacity duration-300"
                     onError={(e) => {
-                      e.currentTarget.src = withBase('imagenes-club/logos/logo-generico.png');
+                      e.currentTarget.src = withBase('imagenes-club/logos/logo-generico.webp');
                     }}
                   />
                 </div>
