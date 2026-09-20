@@ -1,4 +1,5 @@
 import { withBase } from '../lib/paths.js';
+import SocialLinks from './SocialLinks.jsx';
 
 function Hero() {
   return (
@@ -77,6 +78,7 @@ function Hero() {
         </div>
 
         {/* Panel */}
+        <div className="flex flex-col gap-5">
         <div
           className="hidden lg:flex flex-col rounded-2xl overflow-hidden border border-white/[0.09] shadow-[0_32px_80px_rgba(0,0,0,0.55)] bg-white/[0.03] backdrop-blur-sm"
           aria-label="Información destacada del club"
@@ -98,6 +100,9 @@ function Hero() {
               </div>
             ))}
           </div>
+        </div>
+
+          <SocialLinks />
         </div>
       </div>
 

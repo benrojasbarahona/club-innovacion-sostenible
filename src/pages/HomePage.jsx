@@ -10,6 +10,7 @@ import Location from '../components/Location.jsx';
 import InstitutionalLink from '../components/InstitutionalLink.jsx';
 import JoinClub from '../components/JoinClub.jsx';
 import Contact from '../components/Contact.jsx';
+import InstitutionalLogos from '../components/InstitutionalLogos.jsx';
 
 function HomePage() {
   return (
@@ -26,6 +27,7 @@ function HomePage() {
       <InstitutionalLink />
       <JoinClub />
       <Contact />
+      <InstitutionalLogos />
     </main>
   );
 }
