@@ -39,7 +39,7 @@ Configuración única en el repo (Settings → Pages): en **Build and
 deployment → Source** selecciona **GitHub Actions**.
 
 El sitio queda disponible en
-`https://<usuario>.github.io/club-innovacion-sostenible/`. Si usas un dominio
+`https://benrojasbarahona/club-innovacion-sostenible`. Si usas un dominio
 propio, ajusta `base` en `vite.config.js` a `/`.
 
 ## Formulario de contacto
